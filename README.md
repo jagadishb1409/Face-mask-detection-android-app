@@ -56,16 +56,21 @@ Organize Directories as shown below
     ├── Val
         ├── images
         ├── labels
+    ├── mask_yolovs.yaml
     └── data.yaml 
  
 Run the command
 
  ```
 # Train yolov5 on our dataset
-$python train.py --batch 16 --epoch 5 --data data.yaml --weights yolov5s.pt
+$python yolov5/train.py --batch 16 --epoch 5 --data data.yaml --cfg mask_yolov5s.yaml --weights yolov5s.pt --name masks_yolov5_result
 ```
  
- 
+ Test the model
+ ```
+ $cd yolov5
+ $python test.py --source test.png --weights runs/train/mask_yolov5_result/weights/best.pt
+ ```
  
  
  
