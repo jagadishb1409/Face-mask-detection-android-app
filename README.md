@@ -16,7 +16,7 @@ ex 0 2.0 12.0 240 320
 ```
 We convert xml files to text files. Then we can split the dataset into Train, Test, Val
 
-Create Folders 
+Create Folders as shown below
 
     
     Images
@@ -30,13 +30,50 @@ Create Folders
     └──  Val
 
 
-## Quick start
+Then change the directories path in pre proess data.py and run the file.
+
+## Train the model
 
 Lets start by cloning yolov5 and installing requirements 
 
 ```
 $git clone https://github.com/ultralytics/yolov5
-$cd yolov5
 $pip install -r requirements.txt
 ```
 
+Create a data.yaml file and change the path, nc (number of classes) and names 
+
+Organize Directories as shown below
+
+    Project
+    ├── yolov5
+    ├── Train
+        ├── images
+        ├── labels
+    ├── Test
+        ├── images
+        ├── labels
+    ├── Val
+        ├── images
+        ├── labels
+    └── data.yaml 
+ 
+Run the command
+
+ ```
+# Train yolov5 on our dataset
+$python train.py --batch 16 --epoch 5 --data data.yaml --weights yolov5s.pt
+```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
