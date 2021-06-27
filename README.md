@@ -72,8 +72,11 @@ $python yolov5/train.py --batch 16 --epoch 5 --data data.yaml --cfg mask_yolov5s
  $python test.py --source test.png --weights runs/train/mask_yolov5_result/weights/best.pt
  ```
  
+ Export ptl file for android app run export.py
  
- 
+ ```
+ $python export.py --weights runs/train/mask_yolov5_result/weights/best.pt --batch 1
+ ```
  
  
  
