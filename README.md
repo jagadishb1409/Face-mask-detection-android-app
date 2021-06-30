@@ -74,9 +74,20 @@ $python yolov5/train.py --batch 16 --epoch 5 --data data.yaml --cfg mask_yolov5s
  
  Export ptl file for android app run export.py
  
+ Before running the code edit export.py line 80 '.torchscript.pt' to '.torchscript.ptl
  ```
  $python export.py --weights runs/train/mask_yolov5_result/weights/best.pt --batch 1
  ```
+ 
+ ## Android app
+ 
+ Create a classes.txt file and write down the class name in newline
+ 
+ Go to this directory 
+ 
+ "\ObjectDetection\app\src\main\assets"
+ 
+ Add your .ptl and txt files and build the app in android studio
  
  
  
