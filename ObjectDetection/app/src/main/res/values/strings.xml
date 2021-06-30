@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Face mask detector</string>
+    <string name="restart">Restart</string>
+    <string name="live">Live</string>
+</resources>
