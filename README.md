@@ -66,10 +66,10 @@ Run the command
 $python yolov5/train.py --batch 16 --epoch 5 --data data.yaml --cfg mask_yolov5s.yaml --weights yolov5s.pt --name masks_yolov5_result
 ```
  
- Test the model
+ Test the model on single image
  ```
  $cd yolov5
- $python test.py --source test.png --weights runs/train/mask_yolov5_result/weights/best.pt
+ $python detect.py --source test.png --weights runs/train/mask_yolov5_result/weights/best.pt
  ```
  
  Export ptl file for android app run export.py
